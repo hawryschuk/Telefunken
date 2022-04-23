@@ -1,5 +1,4 @@
-import { Terminal, TerminalActivity, BaseService } from '../../@hawryschuk-terminal-restapi';
-import { Table } from '../../@hawryschuk-terminal-restapi/Table';
+import { Terminal, TerminalActivity, BaseService, Table } from '@hawryschuk/terminals';
 import { Util } from '@hawryschuk/common';
 import { Suit } from "./Suit";
 import { Card } from "./Card";
@@ -40,16 +39,13 @@ export class Game extends BaseService {
         this.players = new Array(4)
             .fill(0)
             .map((_, index) => {
-                const terminal = terminals[index] ||= new RobotTerminal();
                 return new Player({
                     game: this,
                     cards: [],
                     terminal: terminals[index],
-                    name: terminal.input.name
-                        || terminals[index] instanceof RobotTerminal && `Robot ${index + 1}`
-                        || `Player ${index + 1}`
+                    name: terminals[index] instanceof RobotTerminal && `Robot ${index + 1}` || `Player ${index + 1}`
                 });
-            })
+            });
         this.history = history;
     }
 
@@ -68,42 +64,113 @@ export class Game extends BaseService {
         }))
     }
 
-    /** Generate a game state from an audit-log */
+    /** transfer a terminal log to this game - reflecting a remote state */
     get history() { return this.myPlayer.terminal.history }
     set history(lines: TerminalActivity[]) {
         lines ||= [];
         this.reset();
-        // const terminals = this.players.map(p => p.terminal);
-        // this.players.forEach(p => (p.cards = []) && (p.terminal = new Terminal));
+        if (lines.length) {
+            let cardCounts = this.players.map(() => 11);
+            for (const line of lines) {
+                const { type, message = '', options } = line;
+                const index = lines.indexOf(line);
+                if (!this.history.length || message === 'Round 1 begins with a discard of 9 of spades') debugger;
 
-        for (const line of lines) {
-            const { type, message = '', options } = line;
-            const index = lines.indexOf(line);
+                this.players.forEach(p => p !== this.myPlayer && (p.cards = []));
 
-            // const playerBids = /^(.+) \(#(\d+)\) bids (\d+)$/;
-            // if (type === 'stdout' && playerBids.test(message)) {
-            //     const [, name, playerNumber, books] = playerBids.exec(message) as string[];
-            //     this.currentPlayer = this.players[parseInt(playerNumber) - 1];
-            //     this.currentPlayer.name = name;
-            //     this.bid(parseInt(books)); // auto-updates currentPlayer
-            //     if (this.bids.length === 4) {
-            //         if (this.perspective != undefined && (this.perspective % 2) != (0 % 2) && this.perspective) {
-            //             const scores = this.players.slice(0, 2).map(p => p.totalScore);
-            //             this.teams.forEach((team, index) => team.players.forEach(player => player.totalScore = scores[(index + 1) % 2]))
-            //         }
-            //     }
-            // }
+                const getCardFromPlayerHand = (name: string) => {
+                    const card = Util.findWhere(this.currentPlayer.cards, { name }) as Card;
+                    if (!card) throw new Error(`cannot find ${name} in player hand (${this.currentPlayer.cards.length})\n${this.currentPlayer.cards.map(c => c.name).sort().join('\n')}`)
+                    return card;
+                }
+
+                const givePlayerCards = (names: string[], fromDeckOnly = false) => {
+                    const allCards = [...(fromDeckOnly ? [] : this.currentPlayer.cards), ...this.deck,];
+                    const cards = names.reduce((cards, name) => {
+                        const card = allCards.find(card => card.name === name && !cards.includes(card)) as Card;
+                        if (!card) throw new Error('card not there: ' + name + ' of ' + names.join(',') + ' from ' + this.currentPlayer.cards.map(c => c.name).sort().join(', '))
+                        return [...cards, card]
+                    }, [] as Card[]);
+                    for (const card of cards)
+                        if (!this.currentPlayer.cards.includes(card))
+                            this.currentPlayer.cards.push(card);
+                    return cards;
+                }
+
+                if (message === 'A telefunken game has just begun') {
+                    this.reset();
+                }
+
+                const roundBegins = /^Round (\d+) begins with a discard of (.+)$/.exec(message) as string[];
+                if (roundBegins) {
+                    cardCounts = this.players.map(() => 11);
+                    this.players.forEach(p => { p.cards = [] });
+                    this.discards = [];
+                    this.handsPlayed = parseInt(roundBegins[1]) - 1;
+                    this.discards.push(this.deck.find(c => c.name === roundBegins[2]) as Card);
+                }
+
+                const nameNumberCards = /^(.+) \(#(\d+)\), here are your cards:([^]+)$/.exec(message) as string[];
+                if (nameNumberCards) {
+                    this.perspective = parseInt(nameNumberCards[2]) - 1;
+                    this.currentPlayer = this.myPlayer;
+                    cardCounts[this.currentPlayer.index] = 0;
+                    for (const name of nameNumberCards[3].match(/(\S+) of (\S+)/g) || []) {
+                        givePlayerCards([name], true);
+                        cardCounts[this.currentPlayer.index]++;
+                    }
+                }
+
+                const playerDrewCard = /^(.+) \(#(\d+)\) drew a card$/.exec(message) as string[];
+                if (playerDrewCard) {
+                    this.currentPlayer = this.players[parseInt(playerDrewCard[2]) - 1];
+                    this.currentPlayer.name = playerDrewCard[1];
+                    cardCounts[this.currentPlayer.index]++;
+                }
+
+                const [, youDrew] = /^You drew the (.+)$/.exec(message) || [];
+                if (youDrew) {
+                    const [card] = givePlayerCards([youDrew], true);
+                    this.drew = card;
+                }
+
+                const playerDiscarded = /^.+ \(#(\d+)\) discarded the (.+)$/.exec(message);
+                if (playerDiscarded) {
+                    const [card] = givePlayerCards([playerDiscarded[2]]);
+                    cardCounts[this.currentPlayer.index]--;
+                    this.drew = card;
+                    this.discards.push(card);
+                    Util.removeElements(this.currentPlayer.cards, card);
+                    this.currentPlayer = this.currentPlayer.nextPlayer;
+                    this.drew = null as any;
+                }
+
+                const playerMelded = /^.+ \(#(\d+)\) melded (.+)$/.exec(message);
+                if (playerMelded) {
+                    const cards: Card[] = givePlayerCards(playerMelded[2].match(/(\S+) of ([a-z]+)/g) || []);
+                    cardCounts[this.currentPlayer.index] -= cards.length;
+                    this.meld(cards);
+                }
+
+                const [, score] = /^Score:\n([^]+)$/.exec(message) || [];
+                if (score) {
+                    const scores = score.match(/: (\d+)(\n|$)/g) as string[];
+                    scores.forEach((score, index) => this.players[index].score = parseInt((/(\d+)/.exec(score) || [])[1]));
+                }
+            }
+            cardCounts.forEach((count, index) => {
+                if (this.players[index].cards.length > count) throw new Error(`${this.players[index].name} has too many cards: ${this.players[index].cards.map(c => c.name).join(',')}`)
+                while (this.players[index].cards.length < count)
+                    this.players[index].cards.push(this.deck[0])
+            });
         }
-
-        // this.players.forEach((p, i) => p.terminal = terminals[i])
-        // this.myPlayer.terminal.history = lines;
     }
 
     set names(names: string[]) { this.players.forEach((player, index) => player.name = names[index] || `Player ${index + 1}`) }
 
     get winners() {
         const lowestScore = Math.min(... this.players.map(p => p.score));
-        return Util.where(this.players, { score: lowestScore })
+        return Util.where(this.players, { score: lowestScore }) as Player[]
     }
 
     get losers() {
@@ -193,12 +260,15 @@ export class Game extends BaseService {
         const game = this;
 
         const displayCards = async () => {
+            await this.broadcast(`Round ${this.round} begins with a discard of ${this.discarded.name}`)
             for (const player of game.players)
-                await player.terminal.send(`Here are your cards:\n${player.cards.map(card => `\t${card.name}`).join('\n')}`)
+                await player.terminal.send(`${player.name} (#${game.players.indexOf(player) + 1}), here are your cards:\n${player.cards.map(card => `\t${card.name}`).join('\n')}`)
         }
 
-        if (!game.currentPlayer.terminal.history.find(i => i.message?.startsWith('Here are your cards')))
+        if (!this.currentPlayer.terminal.history.find(i => i.message === 'A telefunken game has just begun')) {
+            await this.broadcast('A telefunken game has just begun');
             await displayCards();
+        }
 
         // would the current player, or any other player, like to buy the discard
         for (const player of [...this.players, ...this.players].slice(this.players.indexOf(this.currentPlayer), this.players.length)) {
@@ -208,7 +278,7 @@ export class Game extends BaseService {
                 type: 'confirm'
             })) {
                 // buy the card
-                await this.broadcast(`player ${this.players.indexOf(player) + 1} bought the discard`)
+                await this.broadcast(`${player.name} (#${player.index + 1}) bought the discard`)
                 player.buy();
                 break;
             }
@@ -216,7 +286,7 @@ export class Game extends BaseService {
 
         // draw a card
         this.draw();
-        await this.broadcast(`player ${this.players.indexOf(this.currentPlayer) + 1} drew a card`)
+        await this.broadcast(`${this.currentPlayer.name} (#${this.currentPlayer.index + 1}) drew a card`)
         await this.currentPlayer.terminal.send(`You drew the ${this.currentPlayer.cards.slice(-1)[0].name}`);
 
         // what would you like to meld
@@ -226,13 +296,18 @@ export class Game extends BaseService {
                 name: 'meld',
                 message: 'Which cards would you like to meld?',
                 type: 'multiselect',
-                choices: this.currentPlayer.cards.map((card, index) => ({ title: card.name, value: index }))
+                choices: [...this.currentPlayer.cards]
+                    .sort((a, b) => a.value - b.value)
+                    .map((card) => ({
+                        title: card.name,
+                        value: this.currentPlayer.cards.indexOf(card)
+                    }))
             });
             if (meld?.length) {
                 const cards = meld.map(index => this.currentPlayer.cards[index]);
                 await this
                     .meld(cards)    // meld the cards
-                    .then(() => this.broadcast(`player ${this.players.indexOf(this.currentPlayer) + 1} melded ${cards.map(card => card.name).join(', ')}`))
+                    .then(() => this.broadcast(`${this.currentPlayer.name} (#${this.currentPlayer.index + 1}) melded ${cards.map(card => card.name).join(', ')}`))
                     .catch(error => {
                         // console.error({ error })
                         return game.currentPlayer.terminal.send(`error: ${error.message}`);
@@ -241,20 +316,20 @@ export class Game extends BaseService {
         } while (meld?.length);
 
         // what would you like to discard
-        let card = ''; let t = game.currentPlayer.terminal;
+        let card = '';
         do {
             card = await game.currentPlayer.terminal.prompt({
                 name: 'discard',
                 message: 'Which card would you like to discard?',
                 type: 'select',
-                choices: game.currentPlayer.cards.map(card => ({
+                choices: [...game.currentPlayer.cards].sort((a, b) => a.value - b.value).map(card => ({
                     title: card.name,
                     value: card.name
                 }))
             });
             if (card) {
                 const round = game.round;
-                await game.broadcast(`${game.currentPlayer.name} discarded the ${card}`);
+                await game.broadcast(`${game.currentPlayer.name} (#${game.currentPlayer.index + 1}) discarded the ${card}`);
                 game.discard(game.currentPlayer.getCard(card));
                 if (game.round !== round) {
                     await game.broadcast(`Round ${round} is over`);
@@ -272,6 +347,37 @@ export class Game extends BaseService {
                 winners: game.winners.map(player => player.name),
                 losers: game.losers.map(player => player.name)
             }
+        }
+    }
+
+    /** used for testing to ensure the restored saved state resembles the saved state */
+    get state() {
+        return {
+            cards: this.myPlayer.cards.map(c => c.name),
+            deck: this.deck.length,
+            bought: this.bought,
+            currentPlayer: this.players.indexOf(this.currentPlayer),
+            discarded: this.discarded.name,
+            discards: this.discards.map(d => d.name),
+            finished: this.finished,
+            handsPlayed: this.handsPlayed,
+            history: this.history,
+            isItMyTurn: this.isItMyTurn,
+            losers: this.losers.map(w => w.name),
+            melds: this.melds.map(m => m.cards.map(c => c.name)),
+            paused: this.paused,
+            perspective: this.perspective,
+            players: this.players.map(p => ({
+                name: p.name,
+                buys: p.buys.map(({ round, card: { name } }) => ({ name, round })),
+                canBuy: p.canBuy,
+                cards: p.cards.length,
+                melded: p.melded,
+                score: p.score,
+            })),
+            round: this.round,
+            status: this.status,
+            winners: this.winners.map(w => w.name),
         }
     }
 

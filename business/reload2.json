@@ -1,0 +1,5061 @@
+{
+    "cards": [
+      "4 of spades",
+      "4 of diamonds",
+      "3 of hearts",
+      "3 of hearts",
+      "3 of spades",
+      "5 of spades",
+      "6 of spades",
+      "8 of spades",
+      "6 of clubs",
+      "3 of spades",
+      "6 of spades"
+    ],
+    "deck": 61,
+    "bought": false,
+    "currentPlayer": 0,
+    "discarded": "2 of diamonds",
+    "discards": [
+      "King of spades",
+      "3 of diamonds",
+      "2 of diamonds"
+    ],
+    "finished": false,
+    "handsPlayed": 2,
+    "history": [
+      {
+        "type": "stdout",
+        "message": "A telefunken game has just begun"
+      },
+      {
+        "type": "stdout",
+        "message": "Round 1 begins with a discard of 4 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1), here are your cards:\n\tAce of diamonds\n\tQueen of spades\n\t6 of hearts\n\t3 of clubs\n\t9 of clubs\n\tKing of spades\n\t9 of hearts\n\t5 of spades\n\t3 of hearts\n\t5 of diamonds\n\tQueen of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 8 of hearts"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "3 of clubs",
+              "value": 3
+            },
+            {
+              "title": "3 of hearts",
+              "value": 8
+            },
+            {
+              "title": "5 of spades",
+              "value": 7
+            },
+            {
+              "title": "5 of diamonds",
+              "value": 9
+            },
+            {
+              "title": "6 of hearts",
+              "value": 2
+            },
+            {
+              "title": "8 of hearts",
+              "value": 11
+            },
+            {
+              "title": "9 of clubs",
+              "value": 4
+            },
+            {
+              "title": "9 of hearts",
+              "value": 6
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 10
+            },
+            {
+              "title": "King of spades",
+              "value": 5
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "3 of clubs",
+              "value": "3 of clubs"
+            },
+            {
+              "title": "3 of hearts",
+              "value": "3 of hearts"
+            },
+            {
+              "title": "5 of spades",
+              "value": "5 of spades"
+            },
+            {
+              "title": "5 of diamonds",
+              "value": "5 of diamonds"
+            },
+            {
+              "title": "6 of hearts",
+              "value": "6 of hearts"
+            },
+            {
+              "title": "8 of hearts",
+              "value": "8 of hearts"
+            },
+            {
+              "title": "9 of clubs",
+              "value": "9 of clubs"
+            },
+            {
+              "title": "9 of hearts",
+              "value": "9 of hearts"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            }
+          ],
+          "resolved": "3 of clubs"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 3 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 2 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 4 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 4 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the Ace of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "3 of hearts",
+              "value": 7
+            },
+            {
+              "title": "5 of spades",
+              "value": 6
+            },
+            {
+              "title": "5 of diamonds",
+              "value": 8
+            },
+            {
+              "title": "6 of hearts",
+              "value": 2
+            },
+            {
+              "title": "8 of hearts",
+              "value": 10
+            },
+            {
+              "title": "9 of clubs",
+              "value": 3
+            },
+            {
+              "title": "9 of hearts",
+              "value": 5
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 9
+            },
+            {
+              "title": "King of spades",
+              "value": 4
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 11
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "3 of hearts",
+              "value": "3 of hearts"
+            },
+            {
+              "title": "5 of spades",
+              "value": "5 of spades"
+            },
+            {
+              "title": "5 of diamonds",
+              "value": "5 of diamonds"
+            },
+            {
+              "title": "6 of hearts",
+              "value": "6 of hearts"
+            },
+            {
+              "title": "8 of hearts",
+              "value": "8 of hearts"
+            },
+            {
+              "title": "9 of clubs",
+              "value": "9 of clubs"
+            },
+            {
+              "title": "9 of hearts",
+              "value": "9 of hearts"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "3 of hearts"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 3 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 3 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 5 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 2 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the Ace of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "5 of spades",
+              "value": 6
+            },
+            {
+              "title": "5 of diamonds",
+              "value": 7
+            },
+            {
+              "title": "6 of hearts",
+              "value": 2
+            },
+            {
+              "title": "8 of hearts",
+              "value": 9
+            },
+            {
+              "title": "9 of clubs",
+              "value": 3
+            },
+            {
+              "title": "9 of hearts",
+              "value": 5
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 8
+            },
+            {
+              "title": "King of spades",
+              "value": 4
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 10
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 11
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "5 of spades",
+              "value": "5 of spades"
+            },
+            {
+              "title": "5 of diamonds",
+              "value": "5 of diamonds"
+            },
+            {
+              "title": "6 of hearts",
+              "value": "6 of hearts"
+            },
+            {
+              "title": "8 of hearts",
+              "value": "8 of hearts"
+            },
+            {
+              "title": "9 of clubs",
+              "value": "9 of clubs"
+            },
+            {
+              "title": "9 of hearts",
+              "value": "9 of hearts"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "5 of spades"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 5 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 6 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 5 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 4 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the Jack of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "5 of diamonds",
+              "value": 6
+            },
+            {
+              "title": "6 of hearts",
+              "value": 2
+            },
+            {
+              "title": "8 of hearts",
+              "value": 8
+            },
+            {
+              "title": "9 of clubs",
+              "value": 3
+            },
+            {
+              "title": "9 of hearts",
+              "value": 5
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 11
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 4
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 9
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 10
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "5 of diamonds",
+              "value": "5 of diamonds"
+            },
+            {
+              "title": "6 of hearts",
+              "value": "6 of hearts"
+            },
+            {
+              "title": "8 of hearts",
+              "value": "8 of hearts"
+            },
+            {
+              "title": "9 of clubs",
+              "value": "9 of clubs"
+            },
+            {
+              "title": "9 of hearts",
+              "value": "9 of hearts"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "5 of diamonds"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 5 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 6 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 6 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 4 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the Queen of spades"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "6 of hearts",
+              "value": 2
+            },
+            {
+              "title": "8 of hearts",
+              "value": 7
+            },
+            {
+              "title": "9 of clubs",
+              "value": 3
+            },
+            {
+              "title": "9 of hearts",
+              "value": 5
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 10
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Queen of spades",
+              "value": 11
+            },
+            {
+              "title": "King of spades",
+              "value": 4
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 8
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 9
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "6 of hearts",
+              "value": "6 of hearts"
+            },
+            {
+              "title": "8 of hearts",
+              "value": "8 of hearts"
+            },
+            {
+              "title": "9 of clubs",
+              "value": "9 of clubs"
+            },
+            {
+              "title": "9 of hearts",
+              "value": "9 of hearts"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "6 of hearts"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 6 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 7 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 6 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 5 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 9 of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "8 of hearts",
+              "value": 6
+            },
+            {
+              "title": "9 of clubs",
+              "value": 2
+            },
+            {
+              "title": "9 of hearts",
+              "value": 4
+            },
+            {
+              "title": "9 of diamonds",
+              "value": 11
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 9
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 5
+            },
+            {
+              "title": "Queen of spades",
+              "value": 10
+            },
+            {
+              "title": "King of spades",
+              "value": 3
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 7
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 8
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "8 of hearts",
+              "value": "8 of hearts"
+            },
+            {
+              "title": "9 of clubs",
+              "value": "9 of clubs"
+            },
+            {
+              "title": "9 of hearts",
+              "value": "9 of hearts"
+            },
+            {
+              "title": "9 of diamonds",
+              "value": "9 of diamonds"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "8 of hearts"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 8 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 7 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 2 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 5 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 10 of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "9 of clubs",
+              "value": 2
+            },
+            {
+              "title": "9 of hearts",
+              "value": 4
+            },
+            {
+              "title": "9 of diamonds",
+              "value": 10
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 11
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 8
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 5
+            },
+            {
+              "title": "Queen of spades",
+              "value": 9
+            },
+            {
+              "title": "King of spades",
+              "value": 3
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 6
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 7
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "9 of clubs",
+              "value": "9 of clubs"
+            },
+            {
+              "title": "9 of hearts",
+              "value": "9 of hearts"
+            },
+            {
+              "title": "9 of diamonds",
+              "value": "9 of diamonds"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "9 of clubs"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 9 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 2 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 5 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 3 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 9 of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "9 of hearts",
+              "value": 3
+            },
+            {
+              "title": "9 of diamonds",
+              "value": 9
+            },
+            {
+              "title": "9 of clubs",
+              "value": 11
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 10
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 7
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 4
+            },
+            {
+              "title": "Queen of spades",
+              "value": 8
+            },
+            {
+              "title": "King of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 5
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 6
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "9 of hearts",
+              "value": "9 of hearts"
+            },
+            {
+              "title": "9 of diamonds",
+              "value": "9 of diamonds"
+            },
+            {
+              "title": "9 of clubs",
+              "value": "9 of clubs"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "9 of hearts"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 9 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 8 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 2 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 6 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the King of spades"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "9 of diamonds",
+              "value": 8
+            },
+            {
+              "title": "9 of clubs",
+              "value": 10
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 9
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 3
+            },
+            {
+              "title": "Queen of spades",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 2
+            },
+            {
+              "title": "King of spades",
+              "value": 11
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 4
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 5
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "9 of diamonds",
+              "value": "9 of diamonds"
+            },
+            {
+              "title": "9 of clubs",
+              "value": "9 of clubs"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "9 of diamonds"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 9 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 4 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 6 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 5 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the Jack of hearts"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "9 of clubs",
+              "value": 9
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 8
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Jack of hearts",
+              "value": 11
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 3
+            },
+            {
+              "title": "Queen of spades",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 2
+            },
+            {
+              "title": "King of spades",
+              "value": 10
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 4
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 5
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "9 of clubs",
+              "value": "9 of clubs"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Jack of hearts",
+              "value": "Jack of hearts"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "9 of clubs"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 9 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 8 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 3 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 7 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 7 of hearts"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "7 of hearts",
+              "value": 11
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 8
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Jack of hearts",
+              "value": 10
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 3
+            },
+            {
+              "title": "Queen of spades",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 2
+            },
+            {
+              "title": "King of spades",
+              "value": 9
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 4
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 5
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "7 of hearts",
+              "value": "7 of hearts"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Jack of hearts",
+              "value": "Jack of hearts"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "7 of hearts"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 7 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 8 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 7 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 2 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 10 of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "10 of diamonds",
+              "value": 8
+            },
+            {
+              "title": "10 of clubs",
+              "value": 11
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Jack of hearts",
+              "value": 10
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 3
+            },
+            {
+              "title": "Queen of spades",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 2
+            },
+            {
+              "title": "King of spades",
+              "value": 9
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 4
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 5
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "10 of clubs",
+              "value": "10 of clubs"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Jack of hearts",
+              "value": "Jack of hearts"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "10 of diamonds"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 10 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 3 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 2 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 7 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 6 of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "6 of diamonds",
+              "value": 11
+            },
+            {
+              "title": "10 of clubs",
+              "value": 10
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Jack of hearts",
+              "value": 9
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 3
+            },
+            {
+              "title": "Queen of spades",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 2
+            },
+            {
+              "title": "King of spades",
+              "value": 8
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 4
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 5
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "6 of diamonds",
+              "value": "6 of diamonds"
+            },
+            {
+              "title": "10 of clubs",
+              "value": "10 of clubs"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Jack of hearts",
+              "value": "Jack of hearts"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "6 of diamonds"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 6 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 4 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 3 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 2 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 7 of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "7 of diamonds",
+              "value": 11
+            },
+            {
+              "title": "10 of clubs",
+              "value": 10
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Jack of hearts",
+              "value": 9
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 3
+            },
+            {
+              "title": "Queen of spades",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 2
+            },
+            {
+              "title": "King of spades",
+              "value": 8
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 4
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 5
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "7 of diamonds",
+              "value": "7 of diamonds"
+            },
+            {
+              "title": "10 of clubs",
+              "value": "10 of clubs"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Jack of hearts",
+              "value": "Jack of hearts"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "7 of diamonds"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 7 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 8 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 8 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 7 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 3 of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "3 of clubs",
+              "value": 11
+            },
+            {
+              "title": "10 of clubs",
+              "value": 10
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Jack of hearts",
+              "value": 9
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 3
+            },
+            {
+              "title": "Queen of spades",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 2
+            },
+            {
+              "title": "King of spades",
+              "value": 8
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 4
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 5
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "3 of clubs",
+              "value": "3 of clubs"
+            },
+            {
+              "title": "10 of clubs",
+              "value": "10 of clubs"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Jack of hearts",
+              "value": "Jack of hearts"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "3 of clubs"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 3 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 9 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 9 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 4 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the King of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "10 of clubs",
+              "value": 10
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Jack of hearts",
+              "value": 9
+            },
+            {
+              "title": "Queen of spades",
+              "value": 1
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": 3
+            },
+            {
+              "title": "Queen of spades",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 2
+            },
+            {
+              "title": "King of spades",
+              "value": 8
+            },
+            {
+              "title": "King of clubs",
+              "value": 11
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 0
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 4
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 5
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "10 of clubs",
+              "value": "10 of clubs"
+            },
+            {
+              "title": "Jack of diamonds",
+              "value": "Jack of diamonds"
+            },
+            {
+              "title": "Jack of hearts",
+              "value": "Jack of hearts"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "Queen of diamonds",
+              "value": "Queen of diamonds"
+            },
+            {
+              "title": "Queen of spades",
+              "value": "Queen of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of clubs",
+              "value": "King of clubs"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "10 of clubs"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 10 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 10 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 9 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Round 1 is over"
+      },
+      {
+        "type": "stdout",
+        "message": "Score:\n\tPlayer 1: 125\n\tRobot 2: 205\n\tRobot 3: 150\n\tRobot 4: 145"
+      },
+      {
+        "type": "stdout",
+        "message": "Round 2 begins with a discard of 6 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1), here are your cards:\n\tKing of spades\n\tAce of hearts\n\tAce of spades\n\t7 of clubs\n\tAce of spades\n\t3 of diamonds\n\tJack of clubs\n\t10 of diamonds\n\t7 of diamonds\n\t6 of clubs\n\tQueen of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 2 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 3 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 2 of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 2 of diamonds",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 4 of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "3 of diamonds",
+              "value": 5
+            },
+            {
+              "title": "4 of clubs",
+              "value": 11
+            },
+            {
+              "title": "6 of clubs",
+              "value": 9
+            },
+            {
+              "title": "7 of clubs",
+              "value": 3
+            },
+            {
+              "title": "7 of diamonds",
+              "value": 8
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 7
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 6
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 10
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 4
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "3 of diamonds",
+              "value": "3 of diamonds"
+            },
+            {
+              "title": "4 of clubs",
+              "value": "4 of clubs"
+            },
+            {
+              "title": "6 of clubs",
+              "value": "6 of clubs"
+            },
+            {
+              "title": "7 of clubs",
+              "value": "7 of clubs"
+            },
+            {
+              "title": "7 of diamonds",
+              "value": "7 of diamonds"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            }
+          ],
+          "resolved": "3 of diamonds"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 3 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 2 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 4 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 2 of spades"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 2 of spades",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the King of hearts"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "4 of clubs",
+              "value": 10
+            },
+            {
+              "title": "6 of clubs",
+              "value": 8
+            },
+            {
+              "title": "7 of clubs",
+              "value": 3
+            },
+            {
+              "title": "7 of diamonds",
+              "value": 7
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 5
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 9
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 11
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 4
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "4 of clubs",
+              "value": "4 of clubs"
+            },
+            {
+              "title": "6 of clubs",
+              "value": "6 of clubs"
+            },
+            {
+              "title": "7 of clubs",
+              "value": "7 of clubs"
+            },
+            {
+              "title": "7 of diamonds",
+              "value": "7 of diamonds"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            }
+          ],
+          "resolved": "4 of clubs"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 4 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 3 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 5 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 3 of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 3 of clubs",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 4 of hearts"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "4 of hearts",
+              "value": 11
+            },
+            {
+              "title": "6 of clubs",
+              "value": 8
+            },
+            {
+              "title": "7 of clubs",
+              "value": 3
+            },
+            {
+              "title": "7 of diamonds",
+              "value": 7
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 5
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 9
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 10
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 4
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "4 of hearts",
+              "value": "4 of hearts"
+            },
+            {
+              "title": "6 of clubs",
+              "value": "6 of clubs"
+            },
+            {
+              "title": "7 of clubs",
+              "value": "7 of clubs"
+            },
+            {
+              "title": "7 of diamonds",
+              "value": "7 of diamonds"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            }
+          ],
+          "resolved": "4 of hearts"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 4 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 4 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 6 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 3 of spades"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 3 of spades",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the King of spades"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "6 of clubs",
+              "value": 8
+            },
+            {
+              "title": "7 of clubs",
+              "value": 3
+            },
+            {
+              "title": "7 of diamonds",
+              "value": 7
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 5
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 9
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 10
+            },
+            {
+              "title": "King of spades",
+              "value": 11
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 4
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "6 of clubs",
+              "value": "6 of clubs"
+            },
+            {
+              "title": "7 of clubs",
+              "value": "7 of clubs"
+            },
+            {
+              "title": "7 of diamonds",
+              "value": "7 of diamonds"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            }
+          ],
+          "resolved": "6 of clubs"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 6 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 5 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 7 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 4 of spades"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 4 of spades",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 2 of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "2 of clubs",
+              "value": 11
+            },
+            {
+              "title": "7 of clubs",
+              "value": 3
+            },
+            {
+              "title": "7 of diamonds",
+              "value": 7
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 5
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 8
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 9
+            },
+            {
+              "title": "King of spades",
+              "value": 10
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 4
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "2 of clubs",
+              "value": "2 of clubs"
+            },
+            {
+              "title": "7 of clubs",
+              "value": "7 of clubs"
+            },
+            {
+              "title": "7 of diamonds",
+              "value": "7 of diamonds"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            }
+          ],
+          "resolved": "2 of clubs"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 2 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 5 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 2 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 5 of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 5 of diamonds",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the Ace of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "7 of clubs",
+              "value": 3
+            },
+            {
+              "title": "7 of diamonds",
+              "value": 7
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 6
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 5
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 8
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 9
+            },
+            {
+              "title": "King of spades",
+              "value": 10
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 4
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 11
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "7 of clubs",
+              "value": "7 of clubs"
+            },
+            {
+              "title": "7 of diamonds",
+              "value": "7 of diamonds"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            }
+          ],
+          "resolved": "7 of clubs"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 7 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 5 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 3 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 6 of hearts"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 6 of hearts",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 2 of hearts"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "2 of hearts",
+              "value": 11
+            },
+            {
+              "title": "7 of diamonds",
+              "value": 6
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 5
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 4
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 8
+            },
+            {
+              "title": "King of spades",
+              "value": 9
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 3
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 10
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "2 of hearts",
+              "value": "2 of hearts"
+            },
+            {
+              "title": "7 of diamonds",
+              "value": "7 of diamonds"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            }
+          ],
+          "resolved": "2 of hearts"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 2 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 4 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 7 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 6 of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 6 of diamonds",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the Ace of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "7 of diamonds",
+              "value": 6
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 5
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 4
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 8
+            },
+            {
+              "title": "King of spades",
+              "value": 9
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 3
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 10
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 11
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "7 of diamonds",
+              "value": "7 of diamonds"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "7 of diamonds"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 7 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 6 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 8 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 3 of hearts"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 3 of hearts",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 5 of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "5 of clubs",
+              "value": 11
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 5
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 4
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 6
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 8
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 3
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 9
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 10
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "5 of clubs",
+              "value": "5 of clubs"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "5 of clubs"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 5 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 6 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 6 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 7 of spades"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 7 of spades",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 4 of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "4 of clubs",
+              "value": 11
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 5
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 4
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 6
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 8
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 3
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 9
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 10
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "4 of clubs",
+              "value": "4 of clubs"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "4 of clubs"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 4 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 7 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 5 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 8 of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 8 of diamonds",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 9 of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "9 of diamonds",
+              "value": 11
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 5
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 4
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 6
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 8
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 3
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 9
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 10
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "9 of diamonds",
+              "value": "9 of diamonds"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "9 of diamonds"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 9 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 5 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 8 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 8 of hearts"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 8 of hearts",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 9 of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "9 of diamonds",
+              "value": 11
+            },
+            {
+              "title": "10 of diamonds",
+              "value": 5
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 4
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 6
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 8
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 3
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 9
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 10
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "9 of diamonds",
+              "value": "9 of diamonds"
+            },
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "9 of diamonds"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 9 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 7 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 8 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 8 of hearts"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 8 of hearts",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the Jack of spades"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "10 of diamonds",
+              "value": 5
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 4
+            },
+            {
+              "title": "Jack of spades",
+              "value": 11
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 6
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 7
+            },
+            {
+              "title": "King of spades",
+              "value": 8
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 3
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 9
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 10
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "10 of diamonds",
+              "value": "10 of diamonds"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Jack of spades",
+              "value": "Jack of spades"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "10 of diamonds"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 10 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 7 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 9 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 4 of hearts"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 4 of hearts",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 9 of clubs"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "9 of clubs",
+              "value": 11
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 4
+            },
+            {
+              "title": "Jack of spades",
+              "value": 10
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 5
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 6
+            },
+            {
+              "title": "King of spades",
+              "value": 7
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 3
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 8
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 9
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "9 of clubs",
+              "value": "9 of clubs"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Jack of spades",
+              "value": "Jack of spades"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "9 of clubs"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 9 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 8 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 9 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 3 of diamonds"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "buy",
+          "message": "Would you like to buy the discard: 3 of diamonds",
+          "type": "confirm",
+          "resolved": false
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "You drew the 10 of spades"
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "meld",
+          "message": "Which cards would you like to meld?",
+          "type": "multiselect",
+          "choices": [
+            {
+              "title": "10 of spades",
+              "value": 11
+            },
+            {
+              "title": "Jack of clubs",
+              "value": 4
+            },
+            {
+              "title": "Jack of spades",
+              "value": 10
+            },
+            {
+              "title": "Queen of clubs",
+              "value": 5
+            },
+            {
+              "title": "King of spades",
+              "value": 0
+            },
+            {
+              "title": "King of hearts",
+              "value": 6
+            },
+            {
+              "title": "King of spades",
+              "value": 7
+            },
+            {
+              "title": "Ace of hearts",
+              "value": 1
+            },
+            {
+              "title": "Ace of spades",
+              "value": 2
+            },
+            {
+              "title": "Ace of spades",
+              "value": 3
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": 8
+            },
+            {
+              "title": "Ace of clubs",
+              "value": 9
+            }
+          ],
+          "resolved": []
+        }
+      },
+      {
+        "type": "prompt",
+        "options": {
+          "name": "discard",
+          "message": "Which card would you like to discard?",
+          "type": "select",
+          "choices": [
+            {
+              "title": "10 of spades",
+              "value": "10 of spades"
+            },
+            {
+              "title": "Jack of clubs",
+              "value": "Jack of clubs"
+            },
+            {
+              "title": "Jack of spades",
+              "value": "Jack of spades"
+            },
+            {
+              "title": "Queen of clubs",
+              "value": "Queen of clubs"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "King of hearts",
+              "value": "King of hearts"
+            },
+            {
+              "title": "King of spades",
+              "value": "King of spades"
+            },
+            {
+              "title": "Ace of hearts",
+              "value": "Ace of hearts"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of spades",
+              "value": "Ace of spades"
+            },
+            {
+              "title": "Ace of diamonds",
+              "value": "Ace of diamonds"
+            },
+            {
+              "title": "Ace of clubs",
+              "value": "Ace of clubs"
+            }
+          ],
+          "resolved": "10 of spades"
+        }
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1) discarded the 10 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 2 (#2) discarded the 9 of hearts"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 10 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 2 of clubs"
+      },
+      {
+        "type": "stdout",
+        "message": "Round 2 is over"
+      },
+      {
+        "type": "stdout",
+        "message": "Score:\n\tPlayer 1: 260\n\tRobot 2: 395\n\tRobot 3: 345\n\tRobot 4: 250"
+      },
+      {
+        "type": "stdout",
+        "message": "Round 3 begins with a discard of King of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Player 1 (#1), here are your cards:\n\t4 of spades\n\t4 of diamonds\n\t3 of hearts\n\t3 of hearts\n\t3 of spades\n\t5 of spades\n\t6 of spades\n\t8 of spades\n\t6 of clubs\n\t3 of spades\n\t6 of spades"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 3 (#3) discarded the 3 of diamonds"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) drew a card"
+      },
+      {
+        "type": "stdout",
+        "message": "Robot 4 (#4) discarded the 2 of diamonds"
+      }
+    ],
+    "isItMyTurn": true,
+    "losers": [
+      "Player 1",
+      "Robot 2",
+      "Robot 3"
+    ],
+    "melds": [],
+    "paused": false,
+    "perspective": 0,
+    "players": [
+      {
+        "name": "Player 1",
+        "buys": [],
+        "canBuy": true,
+        "cards": 11,
+        "melded": 0,
+        "score": 260
+      },
+      {
+        "name": "Robot 2",
+        "buys": [],
+        "canBuy": true,
+        "cards": 11,
+        "melded": 0,
+        "score": 395
+      },
+      {
+        "name": "Robot 3",
+        "buys": [],
+        "canBuy": true,
+        "cards": 11,
+        "melded": 0,
+        "score": 345
+      },
+      {
+        "name": "Robot 4",
+        "buys": [],
+        "canBuy": true,
+        "cards": 11,
+        "melded": 0,
+        "score": 250
+      }
+    ],
+    "round": 3,
+    "status": "buy-or-draw",
+    "winners": [
+      "Robot 4"
+    ]
+  }

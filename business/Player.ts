@@ -1,6 +1,6 @@
 import { Game } from './Game';
 import { Card } from "./Card";
-import { TerminalActivity, Terminal, WebTerminal } from '../../@hawryschuk-terminal-restapi';
+import { TerminalActivity, Terminal, WebTerminal } from '@hawryschuk/terminals';
 import { Meld } from './Meld';
 import { Util } from '@hawryschuk/common';
 

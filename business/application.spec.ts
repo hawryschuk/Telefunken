@@ -1,10 +1,12 @@
+import { diff, addedDiff, deletedDiff, updatedDiff, detailedDiff } from 'deep-object-diff';
 import { expect } from 'chai';
 import { Game } from "./Game";
-import { Terminal } from "../../@hawryschuk-terminal-restapi/Terminal";
+import { Terminal } from '@hawryschuk/terminals';
 import { Util } from '@hawryschuk/common';
 import { Player } from './Player';
 import { Card } from './Card';
 import { Meld } from './Meld';
+import { readFileSync } from 'fs';
 
 describe('Spades Game', () => {
     /** Run tests in sequence playing out a full game (each subsequent test is dependent on the preceding one) */
@@ -23,6 +25,9 @@ describe('Spades Game', () => {
             if (card.discarded) Util.removeElements(game.discards, card);
         }
         player.cards.push(...cards);
+        if(player.cards.some(c=>!c)){
+            throw new Error('wtf')
+        }
     }
 
     /** ACT on an invalid meld in order ASSERT the error message */
@@ -315,6 +320,17 @@ describe('Spades Game', () => {
         } while (!game.finished);
         expect(game.finished).to.be.ok;
         await Util.pause(1000);
+    });
+
+    it('can reload a game state', () => {
+        for (const file of [
+            'reload1.json',
+            'reload2.json'
+        ]) {
+            const state = JSON.parse(readFileSync(file));
+            const game = new Game({ history: state.history, terminals: new Array(4).fill(0).map(() => new Terminal()) });
+            expect(game.state).to.deep.equal(state);
+        }
     });
 
     after(() => {

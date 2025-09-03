@@ -1,4 +1,4 @@
-export * from './Game';
+export * from './TelefunkenGame';
 export * from './Player';
 export * from './Card';
 export * from './Suit';

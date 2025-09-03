@@ -1,0 +1,213 @@
+$buttonheight: 30px;
+
+:host {
+    background-color: lightblue;
+    position: relative;
+    width: 350px;
+    height: 575px;
+    overflow: hidden;
+    display: block;
+
+    .round {
+        border: 1px solid black;
+        width: 95%;
+        margin: 2%;
+    }
+
+    .players {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        height: 175px;
+        border: 1px solid black;
+
+        .player {
+            flex: 1;
+            margin: 5px;
+            width: 70px;
+            border: 1px solid black;
+            height: 90%;
+
+            &.active {
+                border: 3px solid blue;
+            }
+        }
+
+    }
+
+    .container1 {
+        border: 1px solid black;
+        width: 100%;
+        margin: 1.5%;
+        height: 200px;
+
+        .deck {
+            border: 1px solid black;
+            float: left;
+            width: 60px;
+            margin: 2px;
+            height: 100px;
+        }
+
+        .discards {
+            border: 1px solid black;
+            float: left;
+            width: 60px;
+            margin: 2px;
+            height: 100px;
+        }
+
+        .melds {
+            border: 1px solid black;
+            float: left;
+            width: calc(100% - 60px - 60px - 30px);
+            margin: 2px;
+            height: 95%;
+            clear: right;
+
+            font-size: 75%;
+            font-weight: bold;
+
+            [data-suit="diamonds"],
+            [data-suit="hearts"] {
+                color: red;
+            }
+
+            [data-suit="clubs"],
+            [data-suit="spades"] {
+                color: black;
+            }
+
+            :not([data-suit]) {
+                color: green;
+            }
+
+            [data-value="13"]::before {
+                content: "🃏";
+            }
+
+            [data-value="12"]::before {
+                content: "A";
+            }
+
+            [data-value="11"]::before {
+                content: "K";
+            }
+
+            [data-value="10"]::before {
+                content: "Q";
+            }
+
+            [data-value="9"]::before {
+                content: "J";
+            }
+
+            [data-value="8"]::before {
+                content: "10";
+            }
+
+            [data-value="7"]::before {
+                content: "9";
+            }
+
+            [data-value="6"]::before {
+                content: "8";
+            }
+
+            [data-value="5"]::before {
+                content: "7";
+            }
+
+            [data-value="4"]::before {
+                content: "6";
+            }
+
+            [data-value="3"]::before {
+                content: "5";
+            }
+
+            [data-value="2"]::before {
+                content: "4";
+            }
+
+            [data-value="1"]::before {
+                content: "3";
+            }
+
+            [data-value="0"]::before {
+                content: "2";
+            }
+
+            [data-suit=diamonds]::after {
+                content: "♦";
+            }
+
+            [data-suit=clubs]::after {
+                content: "♣";
+            }
+
+            [data-suit=spades]::after {
+                content: "♠";
+            }
+
+            [data-suit=hearts]::after {
+                content: "♥";
+            }
+        }
+    }
+
+    .container2 {
+        border: 1px solid black;
+        width: 100%;
+        margin: 1.5%;
+        height: 25px;
+
+        button {
+            width: 75px;
+            margin: 2px;
+            padding: 2px;
+
+            &.meld {}
+
+            &.discard {}
+        }
+
+
+    }
+
+    .cards {
+        border: 1px solid red;
+        width: 95%;
+        margin: 1.5%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+
+        app-card {
+            &.selected {
+                margin-top: -5px;
+            }
+
+            ::ng-deep div.card {
+                margin-top: 0;
+                margin-left: 0;
+                position: inherit;
+                width: 20px;
+                height: 45px;
+            }
+        }
+    }
+
+    .status {
+        position: absolute;
+        bottom: 0;
+        border: 1px solid black;
+        padding: 2%;
+        width: 100%;
+        text-align: center;
+        height: 40px;
+        vertical-align: middle;
+    }
+}

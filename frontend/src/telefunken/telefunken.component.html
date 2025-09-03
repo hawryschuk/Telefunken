@@ -1,0 +1,70 @@
+<ng-container *ngIf="prompts">
+    <div class="modals">
+        <div *ngIf="game.finished" class="finished">
+            Game over!
+        </div>
+    </div>
+
+    <div class="round">
+        Round <span> {{ game.round }} </span>
+    </div>
+
+    <div class="players">
+        <div *ngFor="let player of game.players; let index = index" class="player" [class.active]="player==game.turn">
+            <!-- <div class="buttons">
+            <button *ngIf="player.type==='VacantTerminal'" (click)="inviteRobot(player)"> robot </button>
+            <button *ngIf="player.type==='VacantTerminal'" (click)="inviteOnline(player)"> online </button>
+            <button *ngIf="player.type!=='VacantTerminal'" (click)="boot(player)"> boot </button>
+            <button (click)="boot(player)"> sit </button>
+            <button (click)="Perspective=index"> observe </button> -->
+            <!-- </div> -->
+
+            <div class="name"> {{ player.name }} </div>
+            <div class="score"> {{ player.score }} </div>
+            <div class="num-cards"> {{ player.cards.length }} </div>
+            <div class="num-melds"> {{ player.melded }} </div>
+            <div class="buys-total"> {{player.buys.length}} </div>
+            <div class="buys-this-hand"> {{player.buysThisHand}} </div>
+        </div>
+        &nbsp;
+    </div>
+
+    <div class="container1">
+        <div class="deck">
+            <app-card (click)="buy(false)" *ngFor="let card of game.deck; let index = index"
+                [card]="{value: undefined, suit: undefined}"
+                [ngStyle]="{position: 'absolute', left: '-120px', top: index*1.5 + 'px'}" name="deck">
+            </app-card>
+        </div>
+        <div class="discards">
+            <app-card [ngStyle]="{position: 'absolute', left: '-110px', top: 0*1.5 + 'px'}" [card]="game.discarded"
+                name="discard">
+            </app-card>
+        </div>
+        <div class="melds">
+            <div *ngFor="let meld of melds" class="meld">
+                <span [attr.data-suit]="card.suit" [attr.data-value]="card.value" *ngFor="let card of meld.cards"
+                    class="card">
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <button *ngIf="prompts.buy" type="button" (click)="buy(true)"> buy </button>
+        <button *ngIf="prompts.buy" type="button" (click)="buy(false)"> pass </button>
+
+        <button (click)="meld()" *ngIf="prompts.meld && selected.length" class="meld">meld</button>
+        <button (click)="discard()" *ngIf="(prompts.meld && selected.length) || (prompts.discard && selected.length==1)"
+            class="discard">discard</button>
+        <span *ngIf="!selected.length" class="error">{{ error }}</span>
+    </div>
+
+    <div class="cards">
+        <app-card (click)="onClick(card)" *ngFor="let card of game.player!.cards; let index = index" [card]="card"
+            [class.selected]="selected.includes(card)" name="" [clickable]="!!(prompts.discard || prompts.meld)">
+        </app-card>
+    </div>
+
+    <div class="status"> {{ status }} </div>
+</ng-container>

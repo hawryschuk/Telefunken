@@ -1,18 +1,15 @@
-import { Util } from "@hawryschuk/common";
-import { Card } from "./Card";
+import { Util } from "@hawryschuk-common/util";
+import { Card, TelefunkenGame } from "./TelefunkenGame";
 import { Player } from "./Player";
 
 export class Meld {
-    public player!: Player;
-    public round!: number;
-    public cards!: Card[];
-    constructor(cards: Card[]) {
-        this.player = cards.map(c => c.player).find(Boolean) as Player;
-        this.round = cards[0].game.round;
-        this.cards = cards.sort((a, b) => a.value - b.value);
+    round!: number;
+
+    constructor(public cards: Card[], public player: Player) {
+        this.round = this.player.game.handsPlayed + 1;
     }
 
-    get game() { return this.cards[0].game }
+    get game() { return this.player.game }
 
     get valid() { return !this.invalid }
 
@@ -28,7 +25,6 @@ export class Meld {
         )
             || !this.player.melded && this.jokers > 1 && 'excessive-jokers'
             || this.cards.length < 1 && 'minimum-1'
-            || this.cards.some(card => !card.melded && card.player !== this.game.currentPlayer) && 'not-your-turn'
             || !this.game.drew && 'has-not-drawn'
             || !(this.cards.length === 1 || this.cards.length >= 3) && 'must-be-single-or-3+'
             || !this.type && ('unknown-type')
@@ -37,7 +33,7 @@ export class Meld {
 
     get doubleTrio(): Meld[] {
         return (this.cards.length === 6 && [this.rotated, this.cards]
-            .map(cards => [new Meld(cards.slice(0, 3)), new Meld(cards.slice(3))])
+            .map(cards => [new Meld(cards.slice(0, 3), this.player), new Meld(cards.slice(3), this.player)])
             .find(melds => {
                 return melds.map(meld => meld.type).includes('pure-trio')
                     && melds.every(type => /set-3|pure-trio/.test(type.type))
@@ -46,14 +42,14 @@ export class Meld {
 
     get doubleCuatro(): Meld[] {
         return (this.cards.length === 8 && [this.rotated, this.cards]
-            .map(cards => [new Meld(cards.slice(0, 4)), new Meld(cards.slice(4))])
+            .map(cards => [new Meld(cards.slice(0, 4), this.player), new Meld(cards.slice(4), this.player)])
             .find((melds: Meld[]) => melds.every(meld => meld.type === 'set-4'))) as Meld[]
     }
 
     get sequence4trio(): Meld[] {
         if (this.cards.length === 7)
             for (const cards of Util.permute(this.cards)) {
-                const melds = [new Meld(cards.slice(0, 3)), new Meld(cards.slice(3))];
+                const melds = [new Meld(cards.slice(0, 3), this.player), new Meld(cards.slice(3), this.player)];
                 if (melds.find(meld => /set-3|trio/.test(meld.type))
                     && melds.find(meld => meld.type === 'sequence-4'))
                     return melds;
@@ -61,33 +57,34 @@ export class Meld {
         return null as any;
     }
 
-    private get jokers() { return Util.where(this.cards, { Value: 'Joker' }).length; }
+    private get jokers() { return Util.where(this.cards, { value: '*' }).length; }
     private get rotated() { return this.cards.slice(-1).concat(this.cards.slice(0, -1)); }
-    private get nonJokers() { return this.cards.filter(c => c.Value !== 'Joker'); }
+    private get nonJokers() { return this.cards.filter(c => c.value !== '*'); }
 
     get type(): string {
         const set = this.nonJokers.every(c => c.value === this.nonJokers[0].value);
         const differentSuits = Util.unique(this.cards.map(c => c.suit)).length === this.cards.length;
         const sameSuit = Util.unique(this.nonJokers.map(c => c.suit)).length === 1;
         const aceAsOne = this.nonJokers
-            .map(card => new Card(this.game, this.nonJokers[0].suit, card.Value === 'Ace' ? -1 : card.value))
-            .sort((a, b) => a.value - b.value);
-        const isSequential = (arr = this.nonJokers) => arr
+            .map(card => <Card>{ suit: this.nonJokers[0].suit, value: card.value === 'A' ? '1' : card.value })
+            .sort((a, b) => TelefunkenGame.CompareCards(a, b))
+        const isSequential = (arr: Card[]) => arr
             .reduce(
-                ({ cards, jokersRemaining }, card, index) => {
-                    if (jokersRemaining && (card.value !== arr[0].value + index)) {
-                        cards.push(new Card(this.game, arr[0].suit, arr[0].value + index))      // insert a joker before this card
-                        jokersRemaining--;
-                    }
+                (cards, card, index) => {
+                    const jokersUsed = Util.where(cards, { value: '*' });
+                    const jokersAvailable = Util.without(Util.where(cards, { value: '*' }), jokersUsed);
+
+                    if (jokersAvailable.length && (card.value !== arr[0].value + index))
+                        cards.push(jokersAvailable.shift()!);
+
                     cards.push(card);
-                    if (jokersRemaining && index === arr.length - 1) {                          // insert a joker at the end after this card
-                        cards.push(new Card(this.game, arr[0].suit, arr[0].value + index + 1))
-                        jokersRemaining--;
-                    }
-                    return { cards, jokersRemaining };
-                }, { cards: [] as Card[], jokersRemaining: this.jokers })
-            .cards
-            .sort((a, b) => a.value - b.value)
+
+                    if (jokersAvailable.length && index === arr.length - 1)
+                        cards.push(jokersAvailable.shift()!);
+
+                    return cards;
+                }, [] as Card[])
+            .sort((a, b) => TelefunkenGame.CompareCards(a, b))
             .every((card, index, arr) => card.value === arr[0].value + index);
         return this.cards.length >= 3 && this.nonJokers.length >= 2 && (
             this.cards.length === 3 && set && !this.jokers && differentSuits && 'pure-trio' // round 1 special

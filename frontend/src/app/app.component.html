@@ -1,0 +1,9 @@
+<h1> Telefunken :: Sample </h1>
+
+<app-service-center [(terminals)]="terminals" [(terminal)]="terminal" [serviceCenter]="serviceCenter">
+
+  <app-telefunken *ngIf="client.Service?.name==='Telefunken' && client.Service?.Instance?.messages?.length" [terminal]="terminal"></app-telefunken>
+
+  <div class="joined-mid-session">Instance is running. Please wait until the instance ends...</div>
+
+</app-service-center>

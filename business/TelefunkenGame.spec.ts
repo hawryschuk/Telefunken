@@ -1,17 +1,14 @@
-import { diff, addedDiff, deletedDiff, updatedDiff, detailedDiff } from 'deep-object-diff';
 import { expect } from 'chai';
-import { Game } from "./Game";
-import { Terminal } from '@hawryschuk/terminals';
-import { Util } from '@hawryschuk/common';
+import { TelefunkenGame as Game, Card } from "./TelefunkenGame";
+import { Terminal } from '@hawryschuk-terminal-restapi';
+import { Util } from '@hawryschuk-common/util';
 import { Player } from './Player';
-import { Card } from './Card';
 import { Meld } from './Meld';
 import { readFileSync } from 'fs';
 
-describe('Spades Game', () => {
+describe('Telefunken', () => {
     /** Run tests in sequence playing out a full game (each subsequent test is dependent on the preceding one) */
-    const game = new Game({ terminals: new Array(4).fill(0).map(() => new Terminal) });
-    game.run();
+    const game = new Game('a b c d'.split(' '));
 
     /** Take cards that havent been melded, but from the deck, discard pile, or other players hands, in order to be arranged in a players hand */
     const fetchCards = (names: string[]) => names.reduce((cards, name) => {
@@ -25,7 +22,7 @@ describe('Spades Game', () => {
             if (card.discarded) Util.removeElements(game.discards, card);
         }
         player.cards.push(...cards);
-        if(player.cards.some(c=>!c)){
+        if (player.cards.some(c => !c)) {
             throw new Error('wtf')
         }
     }

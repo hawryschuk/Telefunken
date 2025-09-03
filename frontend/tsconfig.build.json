@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.app.json",
+    "compilerOptions": {
+        "paths": {
+            "*": [
+                "./*",
+                "../*",
+                "../../*"
+            ],
+            "@angular/*": [
+                "node_modules/@angular/*"
+            ]
+        }
+    }
+}

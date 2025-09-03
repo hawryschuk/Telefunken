@@ -80,16 +80,21 @@ jobs:
       # - name: Test
       #   run: npm t
 
+      - name: Disable mandb
+        run: |
+          sudo dpkg-divert --local --rename --add /usr/bin/mandb
+          sudo ln -sf /bin/true /usr/bin/mandb
+
       - name: Install dependencies
         run: |
           # sudo apt-get update
-          sudo apt-get install -y pandoc
-          pip install
+          sudo apt-get install -y pandoc plantuml
+          pip install pandoc-plantuml-filter
 
       - name: Build HTML from Markdown
         run: |
-          pandoc README.md --standalone --to html5 -o index.html
-          rm -rf dist && mkdir dist && cp -r CNAME *.html dist
+          pandoc README.md --standalone --to html5 --filter pandoc-plantuml -o index.html
+          rm -rf dist && mkdir dist && cp -r CNAME *.html plantuml-images/ dist
 
       - name: Copy sample ui app
         run: |
